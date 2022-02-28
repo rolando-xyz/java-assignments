@@ -81,7 +81,8 @@ public class UserController {
     	if(session.getAttribute("userId")==null) {
     		return "redirect:/";
     	}
-    	model.addAttribute("name", currentUser.getUserName());
+    	User user = userService.getUser((Long)session.getAttribute("userId"));
+    	model.addAttribute("name", user);
     	return "dashboard.jsp";
     }
     
