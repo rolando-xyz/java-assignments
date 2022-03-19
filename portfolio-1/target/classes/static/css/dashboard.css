@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "comforta";
+}
+
+main {
+	height: 100vh;
+}
+
+.hi-slide {
+	position: relative;
+	width: 754px;
+	height: 292px;
+	margin: 115px auto 0;
+}
+
+.hi-slide .hi-next,
+.hi-slide .hi-prev {
+	position: absolute;
+	top: 50%;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	border-radius: 50px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	transition: all 0.7s;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.hi-slide .hi-next:hover,
+.hi-slide .h1-prev:hover {
+	opacity: 1;
+	background-color: white;
+}
+
+.high-slide .hi-prev {
+	left: -70px;
+}
+
+.hi-slide .hi-prev::before {
+	content: '<';
+}
+
+.hi-slide .hi-next {
+	right: -70px;
+}
+
+.hi-slide .hi-next::before {
+	content: '>';
+}
+
+.hi-slide > ul {
+	list-style: none;
+	position: relative;
+	width: 754px;
+	height: 292;
+	margin: 0;
+	padding: 0;
+}
+
+.hi-slide > ul > li {
+	overflow: hidden;
+	position: absolute;
+	z-index: 0;
+	left: 377px;
+	top: 147px;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: 1px solid white;
+	background-color: #333;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+.hi-slide > ul >li > img {
+	width: 100%;
+	height: 100%;
+	background-position: center;
+}
+
+.block {
+	width: 300px;
+	height: 300px;
+	background-color: grey;
+	border-radius: 30px;
+}
+
+.menu-item {
+	height: 50px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	background-color: grey;
+}
+
+.contact-btn {
+	width: 150px;
+	border-radius: 10px;
+	padding: 5px;
+	color: white;
+	background-color: teal;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown-items {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 0;
+	top: calc(100% + .25rem);
+	width: 300px;
+	height: 500px;
+	background-color: white;
+	padding: .75rem;
+	border-radius: 15px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+	opacity: 0;
+}
+
+.dropdown > .menu-button:focus + .dropdown-items {
+	opacity: 1;
+}
+
+.menu-button:hover {
+	color: black;
+}
+
+.menu-button {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	transition: all .5s ease-in-out;
+	/* border: 3px solid #fff; */
+}
+
+.menu-button-burger {
+	width: 30px;
+	height: 3px;
+	background: #fff;
+	border-radius: 2px;
+	box-shadow: 0 2px 5px rgba(255,101,47,.2);
+	transition: all .5s ease-in-out;
+}
+
+.menu-button-burger::before,
+.menu-button-burger::after {
+	content: "";
+	position: absolute;
+	width: 30px;
+	height: 3px;
+	background: #fff;
+	border-radius: 2px;
+	box-shadow: 0 2px 5px rgba(255,101,47,.2);
+	transition: all .5s ease-in-out;
+}
+
+.menu-button-burger::before {
+	transform: translateY(-8px);
+}
+.menu-button-burger::after {
+	transform: translateY(8px);
+}
